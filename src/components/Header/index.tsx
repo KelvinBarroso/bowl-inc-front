@@ -1,4 +1,4 @@
-import { Button, Container, Slide, Typography } from "@mui/material";
+import { Container, Slide, Typography } from "@mui/material";
 import React from "react";
 import bowlMain from "./bowlMain.png";
 
@@ -32,21 +32,6 @@ export const Header = (): JSX.Element => {
                 alignItems: "center",
               }}
             >
-              {/* <Container
-                sx={{
-                  display: "flex",
-                  position: "absolute",
-                  justifyContent: "center",
-                }}
-              >
-                <Button variant="contained" sx={{ ml: 1 }}>
-                  Subscribe
-                </Button>
-                <Button variant="contained" sx={{ mr: 1 }}>
-                  Comment
-              </Button>
-              </Container>*/}
-
               <img src={bowlMain} alt="woman-holding-bowl" width="600" />
             </Container>
             <Typography variant="body1" sx={{ mt: 4 }}>

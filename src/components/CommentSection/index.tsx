@@ -24,7 +24,7 @@ export const CommentSection = ({
         </Grid>
         {userInfoData &&
           userInfoData.map((userData: UserInfo) => (
-            <Grid item xs={6} key={userData.email}>
+            <Grid item xs={6} key={userData.id}>
               <CommentCard userData={userData} />
             </Grid>
           ))}

@@ -11,6 +11,7 @@ const INITIAL_VALUES: UserInfo = {
   comment: "",
 };
 const validationSchema: yup.SchemaOf<UserInfo> = yup.object({
+  id: yup.number(),
   name: yup
     .string()
     .typeError("Conteúdo inválido.")

@@ -49,7 +49,10 @@ export const UserForm = ({
       <Formik
         initialValues={INITIAL_VALUES}
         enableReinitialize
-        onSubmit={handleSubmit}
+        onSubmit={(values: UserInfo, { resetForm }) => {
+          handleSubmit(values);
+          resetForm({ values: INITIAL_VALUES });
+        }}
         validationSchema={validationSchema}
       >
         {({ isValid, dirty }) => (

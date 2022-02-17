@@ -16,19 +16,19 @@ export const Landing = (): JSX.Element => {
   });
 
   const onSubscribe = useMutation(
-    (userData: UserInfo) => userRequests.postSubscribe(userData),
+    (userData: UserInfo) => userRequests.apiPost("/usersubscribe", userData),
     {
       onSuccess: () => {
         alert("Subscribed suceffully");
       },
       onError: () => {
-        alert('User already subscribed.');
+        alert("User already subscribed.");
       },
     }
   );
 
   const onComment = useMutation(
-    (userData: UserInfo) => userRequests.postComment(userData),
+    (userData: UserInfo) => userRequests.apiPost("/usercomment", userData),
     {
       onSuccess: () => {
         queryClient.invalidateQueries("data");

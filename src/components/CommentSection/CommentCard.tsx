@@ -17,10 +17,10 @@ interface CommentCardProps {
 }
 export const CommentCard = ({ userData }: CommentCardProps): JSX.Element => {
   return (
-    <Card>
+    <Card sx={{ backgroundColor: "#ffeb81" }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: "purple" }} aria-label="recipe">
             {userData.name[0]}
           </Avatar>
         }
